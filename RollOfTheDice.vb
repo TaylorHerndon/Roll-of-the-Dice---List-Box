@@ -29,7 +29,19 @@ Public Class RollOfTheDice
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
         ListBoxResults.Items.Add("|   2    |   3   |   4    |   5    |   6    |   7    |   8    |   9    |   10   |   11   |   12   |")
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
-        ListBoxResults.Items.Add("|" & rollCount(2).ToString.PadLeft(6) & " |" & rollCount(3).ToString.PadLeft(6) & " |" & rollCount(4).ToString.PadLeft(6) & " |" & rollCount(5).ToString.PadLeft(6) & " |" & rollCount(6).ToString.PadLeft(6) & " |" & rollCount(7).ToString.PadLeft(6) & " |" & rollCount(8).ToString.PadLeft(6) & " |" & rollCount(9).ToString.PadLeft(6) & " |" & rollCount(10).ToString.PadLeft(7) & " |" & rollCount(11).ToString.PadLeft(7) & " |" & rollCount(12).ToString.PadLeft(7) & " |")
+
+        ListBoxResults.Items.Add("|" & rollCount(2).ToString.PadLeft(6) &
+                                 " |" & rollCount(3).ToString.PadLeft(6) &
+                                 " |" & rollCount(4).ToString.PadLeft(6) &
+                                 " |" & rollCount(5).ToString.PadLeft(6) &
+                                 " |" & rollCount(6).ToString.PadLeft(6) &
+                                 " |" & rollCount(7).ToString.PadLeft(6) &
+                                 " |" & rollCount(8).ToString.PadLeft(6) &
+                                 " |" & rollCount(9).ToString.PadLeft(6) &
+                                 " |" & rollCount(10).ToString.PadLeft(7) &
+                                 " |" & rollCount(11).ToString.PadLeft(7) &
+                                 " |" & rollCount(12).ToString.PadLeft(7) & " |")
+
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
 
     End Sub

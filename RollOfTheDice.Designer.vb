@@ -45,7 +45,7 @@ Partial Class RollOfTheDice
         Me.ButtonRoll.Location = New System.Drawing.Point(36, 339)
         Me.ButtonRoll.Name = "ButtonRoll"
         Me.ButtonRoll.Size = New System.Drawing.Size(319, 66)
-        Me.ButtonRoll.TabIndex = 3
+        Me.ButtonRoll.TabIndex = 1
         Me.ButtonRoll.Text = "ROLL"
         Me.ButtonRoll.UseVisualStyleBackColor = True
         '
@@ -55,12 +55,13 @@ Partial Class RollOfTheDice
         Me.ButtonClear.Location = New System.Drawing.Point(384, 339)
         Me.ButtonClear.Name = "ButtonClear"
         Me.ButtonClear.Size = New System.Drawing.Size(174, 66)
-        Me.ButtonClear.TabIndex = 3
+        Me.ButtonClear.TabIndex = 2
         Me.ButtonClear.Text = "CLEAR"
         Me.ButtonClear.UseVisualStyleBackColor = True
         '
         'ButtonExit
         '
+        Me.ButtonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ButtonExit.Font = New System.Drawing.Font("Modern No. 20", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonExit.Location = New System.Drawing.Point(573, 339)
         Me.ButtonExit.Name = "ButtonExit"
