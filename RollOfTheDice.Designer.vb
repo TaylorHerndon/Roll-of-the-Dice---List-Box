@@ -22,11 +22,13 @@ Partial Class RollOfTheDice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ListBoxResults = New System.Windows.Forms.ListBox()
         Me.ButtonRoll = New System.Windows.Forms.Button()
         Me.ButtonClear = New System.Windows.Forms.Button()
         Me.ButtonExit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ToolTipRoll = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'ListBoxResults
@@ -47,6 +49,7 @@ Partial Class RollOfTheDice
         Me.ButtonRoll.Size = New System.Drawing.Size(319, 66)
         Me.ButtonRoll.TabIndex = 1
         Me.ButtonRoll.Text = "ROLL"
+        Me.ToolTipRoll.SetToolTip(Me.ButtonRoll, "Press to roll 2 six sided dice 1000 times.")
         Me.ButtonRoll.UseVisualStyleBackColor = True
         '
         'ButtonClear
@@ -80,6 +83,10 @@ Partial Class RollOfTheDice
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "ROLL OF THE DICE"
         '
+        'ToolTipRoll
+        '
+        Me.ToolTipRoll.ToolTipTitle = "Roll Button"
+        '
         'RollOfTheDice
         '
         Me.AcceptButton = Me.ButtonRoll
@@ -104,4 +111,5 @@ Partial Class RollOfTheDice
     Friend WithEvents ButtonClear As Button
     Friend WithEvents ButtonExit As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents ToolTipRoll As ToolTip
 End Class

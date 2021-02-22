@@ -7,6 +7,7 @@ Option Explicit On
 'Spring 2021
 'https://github.com/TaylorHerndon/Roll-of-the-Dice---List-Box
 
+
 Public Class RollOfTheDice
 
     Sub RollButtonPress() Handles ButtonRoll.Click
@@ -44,6 +45,8 @@ Public Class RollOfTheDice
 
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
 
+
+
     End Sub
 
     Sub ClearButtonPress() Handles ButtonClear.Click
@@ -59,5 +62,6 @@ Public Class RollOfTheDice
         End
 
     End Sub
+
 
 End Class
