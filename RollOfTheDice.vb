@@ -28,24 +28,23 @@ Public Class RollOfTheDice
         'Write out the header and results
         ListBoxResults.Items.Add("                                          ROLL OF THE DICE                                          ")
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
-        ListBoxResults.Items.Add("|   2    |   3   |   4    |   5    |   6    |   7    |   8    |   9    |   10   |   11   |   12   |")
+        ListBoxResults.Items.Add("|    2    |   3   |   4    |   5    |   6    |   7    |   8    |   9    |  10   |  11   |   12   |")
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
 
-        ListBoxResults.Items.Add("|" & rollCount(2).ToString.PadLeft(6) &
-                                 " |" & rollCount(3).ToString.PadLeft(6) &
-                                 " |" & rollCount(4).ToString.PadLeft(6) &
-                                 " |" & rollCount(5).ToString.PadLeft(6) &
-                                 " |" & rollCount(6).ToString.PadLeft(6) &
-                                 " |" & rollCount(7).ToString.PadLeft(6) &
-                                 " |" & rollCount(8).ToString.PadLeft(6) &
-                                 " |" & rollCount(9).ToString.PadLeft(6) &
-                                 " |" & rollCount(10).ToString.PadLeft(7) &
-                                 " |" & rollCount(11).ToString.PadLeft(7) &
-                                 " |" & rollCount(12).ToString.PadLeft(7) & " |")
+        'Concatanate all roll counts with |s in between 
+        Dim rollCountString As String = ""
+
+        For i = 2 To 12
+
+            rollCountString = rollCountString & " |" & rollCount(i).ToString.PadLeft(6)
+
+        Next
+
+        rollCountString = rollCountString & "  |"
+
+        ListBoxResults.Items.Add(rollCountString)
 
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
-
-
 
     End Sub
 
@@ -62,6 +61,5 @@ Public Class RollOfTheDice
         End
 
     End Sub
-
 
 End Class
