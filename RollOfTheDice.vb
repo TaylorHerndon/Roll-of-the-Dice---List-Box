@@ -42,8 +42,10 @@ Public Class RollOfTheDice
 
         rollCountString = rollCountString & "  |"
 
+        'Write out the concatanated string
         ListBoxResults.Items.Add(rollCountString)
 
+        'Finish header
         ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
 
     End Sub
