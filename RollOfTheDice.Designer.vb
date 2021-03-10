@@ -33,12 +33,12 @@ Partial Class RollOfTheDice
         '
         'ListBoxResults
         '
-        Me.ListBoxResults.Font = New System.Drawing.Font("Modern No. 20", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBoxResults.Font = New System.Drawing.Font("Consolas", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBoxResults.FormattingEnabled = True
-        Me.ListBoxResults.ItemHeight = 22
-        Me.ListBoxResults.Location = New System.Drawing.Point(36, 48)
+        Me.ListBoxResults.ItemHeight = 19
+        Me.ListBoxResults.Location = New System.Drawing.Point(36, 64)
         Me.ListBoxResults.Name = "ListBoxResults"
-        Me.ListBoxResults.Size = New System.Drawing.Size(711, 268)
+        Me.ListBoxResults.Size = New System.Drawing.Size(813, 251)
         Me.ListBoxResults.TabIndex = 0
         '
         'ButtonRoll
@@ -55,7 +55,7 @@ Partial Class RollOfTheDice
         'ButtonClear
         '
         Me.ButtonClear.Font = New System.Drawing.Font("Modern No. 20", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonClear.Location = New System.Drawing.Point(384, 339)
+        Me.ButtonClear.Location = New System.Drawing.Point(495, 339)
         Me.ButtonClear.Name = "ButtonClear"
         Me.ButtonClear.Size = New System.Drawing.Size(174, 66)
         Me.ButtonClear.TabIndex = 2
@@ -66,7 +66,7 @@ Partial Class RollOfTheDice
         '
         Me.ButtonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ButtonExit.Font = New System.Drawing.Font("Modern No. 20", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonExit.Location = New System.Drawing.Point(573, 339)
+        Me.ButtonExit.Location = New System.Drawing.Point(675, 339)
         Me.ButtonExit.Name = "ButtonExit"
         Me.ButtonExit.Size = New System.Drawing.Size(174, 66)
         Me.ButtonExit.TabIndex = 3
@@ -93,7 +93,7 @@ Partial Class RollOfTheDice
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ButtonExit
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(887, 450)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonExit)
         Me.Controls.Add(Me.ButtonClear)

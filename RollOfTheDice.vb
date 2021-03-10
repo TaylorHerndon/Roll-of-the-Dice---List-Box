@@ -26,27 +26,27 @@ Public Class RollOfTheDice
         ListBoxResults.Items.Clear()
 
         'Write out the header and results
-        ListBoxResults.Items.Add("                                          ROLL OF THE DICE                                          ")
-        ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
-        ListBoxResults.Items.Add("|    2    |   3   |   4    |   5    |   6    |   7    |   8    |   9    |  10   |  11   |   12   |")
-        ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
+        ListBoxResults.Items.Add("                                       ROLL OF THE DICE                                  ")
+        ListBoxResults.Items.Add("-----------------------------------------------------------------------------------------")
+        ListBoxResults.Items.Add("|   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   10  |   11  |   12  |")
+        ListBoxResults.Items.Add("-----------------------------------------------------------------------------------------")
 
         'Concatanate all roll counts with |s in between 
         Dim rollCountString As String = ""
 
         For i = 2 To 12
 
-            rollCountString = rollCountString & " |" & rollCount(i).ToString.PadLeft(6)
+            rollCountString = rollCountString & "|" & rollCount(i).ToString.PadLeft(5) & "  "
 
         Next
 
-        rollCountString = rollCountString & "  |"
+        rollCountString = rollCountString & "|"
 
         'Write out the concatanated string
         ListBoxResults.Items.Add(rollCountString)
 
         'Finish header
-        ListBoxResults.Items.Add("----------------------------------------------------------------------------------------------------")
+        ListBoxResults.Items.Add("-----------------------------------------------------------------------------------------")
 
     End Sub
 
@@ -64,4 +64,11 @@ Public Class RollOfTheDice
 
     End Sub
 
+    Private Sub RollButtonPress(sender As Object, e As EventArgs) Handles ButtonRoll.Click
+
+    End Sub
+
+    Private Sub ExitButtonPress(sender As Object, e As EventArgs) Handles ButtonExit.Click
+
+    End Sub
 End Class
