@@ -10,15 +10,16 @@ Option Explicit On
 
 Public Class RollOfTheDice
 
-    Sub RollButtonPress() Handles ButtonRoll.Click
+    Sub RollButtonPress() Handles RollButton.Click, RollToolStripMenuItem.Click
 
         Randomize()
         Dim rollCount(12) As Integer
+        Dim rollCountString As String = ""
 
         'Roll two six sided dice 1000 times and incriment the coresponding result
         For i = 1 To 1000
 
-            rollCount(CInt(Math.Ceiling(VBMath.Rnd * 6 + VBMath.Rnd * 6))) += 1
+            rollCount(CInt(Math.Ceiling(VBMath.Rnd * 6) + Math.Ceiling(VBMath.Rnd * 6))) += 1
 
         Next
 
@@ -27,13 +28,11 @@ Public Class RollOfTheDice
 
         'Write out the header and results
         ListBoxResults.Items.Add("                                       ROLL OF THE DICE                                  ")
-        ListBoxResults.Items.Add("-----------------------------------------------------------------------------------------")
+        ListBoxResults.Items.Add(StrDup(89, "-"))
         ListBoxResults.Items.Add("|   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   10  |   11  |   12  |")
-        ListBoxResults.Items.Add("-----------------------------------------------------------------------------------------")
+        ListBoxResults.Items.Add(StrDup(89, "-"))
 
         'Concatanate all roll counts with |s in between 
-        Dim rollCountString As String = ""
-
         For i = 2 To 12
 
             rollCountString = rollCountString & "|" & rollCount(i).ToString.PadLeft(5) & "  "
@@ -46,29 +45,30 @@ Public Class RollOfTheDice
         ListBoxResults.Items.Add(rollCountString)
 
         'Finish header
-        ListBoxResults.Items.Add("-----------------------------------------------------------------------------------------")
+        ListBoxResults.Items.Add(StrDup(89, "-"))
 
     End Sub
 
-    Sub ClearButtonPress() Handles ButtonClear.Click
+    Sub ClearButtonPress() Handles ClearButton.Click, ClearToolStripMenuItem.Click
 
         'Clear the list box
         ListBoxResults.Items.Clear()
 
     End Sub
 
-    Sub ExitButtonPress() Handles ButtonExit.Click
+    Sub ExitButtonPress() Handles ExitButton.Click, ExitToolStripMenuItem.Click
 
         'End the program
         End
 
     End Sub
 
-    Private Sub RollButtonPress(sender As Object, e As EventArgs) Handles ButtonRoll.Click
+    Sub HelpButtonPress() Handles HelpToolStripMenuItem.Click
+
+        MsgBox("Welcome to Roll Of The Dice - List Box Eddition!" & vbNewLine &
+               "To get started press 'Roll', this will roll 1000 sets of 2, 6 sided dice!" & vbNewLine &
+               "The results of how many times each result occured will be displayed in the list box.")
 
     End Sub
 
-    Private Sub ExitButtonPress(sender As Object, e As EventArgs) Handles ButtonExit.Click
-
-    End Sub
 End Class
